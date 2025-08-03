@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: node-selector-demo
+  name: node-selector-demo          # 📛 Name of the pod
   labels:
-    env: test
+    env: test                       # 🏷️ Label for identifying environment
 spec:
   containers:
-  - name: nginx
-    image: nginx
-    imagePullPolicy: IfNotPresent
+  - name: nginx                     # 📦 Container name
+    image: nginx                    # 🐳 Image to be used
+    imagePullPolicy: Always        # 🔁 Always pull the latest image
   nodeSelector:
-    disktype: ssd
+    disktype: ssd                  # 🎯 Schedule pod only on nodes with label disktype=ssd
