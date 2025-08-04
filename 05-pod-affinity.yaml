@@ -34,7 +34,7 @@ spec:
         podAffinityTerm:
           labelSelector:
             matchExpressions:
-            - key: app-name
+            - key: app-namee
               operator: In # Affinity condition pod-1 & pod-2 assigned with same Node
               values:
               - pod-1
