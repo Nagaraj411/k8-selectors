@@ -33,15 +33,3 @@ Here's a mnemonic to simplify these concepts:
 | `nodeAffinity`        | For complex node conditions (preferred vs required)       |
 | `podAffinity`         | Co-locating collaborating services (e.g., app ↔ cache)    |
 | `podAntiAffinity`     | High availability with distributed replicas               |
-
-## 📚 For Interviews & LinkedIn
-
-Each YAML example includes inline comments to serve as concise talking points. Use these artifacts to:
-
-- Showcase your Kubernetes mastery 👨‍💻
-- Clarify how scheduling impacts scalability & reliability ⚙️
-- Create LinkedIn carousel posts or tutorial threads 📣
-
----
-
-Let me know if you’d like a visual diagram added or want me to rewrite this for a more casual tone!
