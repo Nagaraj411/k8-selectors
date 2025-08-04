@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: with-node-anti-affinity
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution: # this is hard anti-affinity
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: hardware
+            operator: NotIn # Anti-affinity condition it will not goes to first node with gpu assigned to remaining 2 nodes
+            values:
+            - gpu
+  containers:
+  - name: with-node-anti-affinity
+    image: nginx

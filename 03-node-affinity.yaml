@@ -9,16 +9,16 @@ spec:
       #   nodeSelectorTerms:
       #   - matchExpressions:
       #     - key: hardware
-      #       operator: In
+      #       operator: In  # Affinity condition it will go to nodes with gpu assigned in 1st node
       #       values:
-      #       - gpu
+      #       - gpu 
             # - gpuuu
       preferredDuringSchedulingIgnoredDuringExecution: # this is soft affinity
       - weight: 1
         preference:
           matchExpressions:
           - key: another-node-label-key
-            operator: In
+            operator: In  
             values:
             - another-node-label-value
   containers:
